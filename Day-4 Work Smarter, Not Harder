@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int T,L,V1,V2;
+    float T1,T2;
+    cin>>T;
+    while(T>0)
+    {
+     cin>>L>>V1>>V2;
+     T1=(float)L/(float)V1;
+     T2=(float)L/(float)V2;
+     int T11,T22;
+     T11=(int)T1;
+     T22=(int)T2;
+     if(T1-T11!=0)
+     {
+         T11+=1;
+     }
+     if(T2-T22!=0)
+     {
+         T22+=1;
+     }
+     if(T2-T1==0)
+     {
+         cout<<"-1"<<endl;
+     }
+     else{
+         cout<<(T11-T22)-1<<endl;
+     }
+     T--;   
+    }
+	return 0;
+}
