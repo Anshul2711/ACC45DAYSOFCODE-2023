@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T,Pa,Pb,Pc;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>Pa>>Pb>>Pc;
+        if((Pa+Pc)>Pb)
+        {
+            cout<<(Pa+Pc)<<endl;
+        }
+        else{
+            cout<<(Pb)<<endl;
+        }
+        T--;
+    }
+    return 0;
+}
