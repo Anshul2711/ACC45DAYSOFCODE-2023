@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T,N;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>N;
+        int i,A[N];
+        for(i=0;i<N;i++)
+        {
+            cin>>A[i];
+        }
+        int max_freq=0;
+        for(i=0;i<N;i++)
+        {
+            int curr_freq=0;
+            for(int j=0;j<N;j++)
+            {
+                if(A[i]==A[j])
+                {
+                    curr_freq++;
+                }
+            }
+            if(curr_freq>max_freq)
+            {
+                max_freq=curr_freq;
+            }
+        }
+        cout<<N-max_freq<<endl;
+        T--;
+    }
+	return 0;
+}
