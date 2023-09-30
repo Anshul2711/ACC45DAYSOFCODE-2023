@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T,N,A,B,count,i,j;
+    cin>>T;
+    while(T>0)
+    {
+        count=0;
+        cin>>N;
+        for(i=1;i<=N;i+=2)
+        {
+            for(j=2;j<=N;j+=2)
+            {
+                    count++;
+            }
+        }
+        cout<<(count*2)<<endl;
+        T--;
+    }
+    return 0;
+}
