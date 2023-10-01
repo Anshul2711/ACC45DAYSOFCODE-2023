@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int T,X,Y,Z;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>X>>Y>>Z;
+        if((X+Y==Z) || (Y+Z==X) || (X+Z==Y))
+        {
+            cout<<"yes"<<endl;
+        }
+        else{
+            cout<<"no"<<endl;
+        }
+        T--;
+    }
+	return 0;
+}
