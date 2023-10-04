@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T,N;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>N;
+        int A[N],B[N],count_A=0,count_B=0,max_A=0,max_B=0,i;
+        for(i=0;i<N;i++)
+        {
+            cin>>A[i];
+        }
+        for(i=0;i<N;i++)
+        {
+            cin>>B[i];
+        }
+        for(i=0;i<N;i++)
+        {
+            if(A[i]!=0)
+            {
+                count_A+=1;
+                if(count_A>max_A)
+                {
+                    max_A=count_A;
+                }
+            }
+            else{
+                count_A=0;
+            }
+            if(B[i]!=0)
+            {
+                count_B+=1;
+                if(count_B>max_B)
+                {
+                    max_B=count_B;
+                }
+            }
+            else{
+                count_B=0;
+            }
+        }
+        if(max_A>max_B)
+        {
+            cout<<"OM"<<endl;
+        }else if(max_A<max_B)
+        {
+            cout<<"ADDY"<<endl;
+        }else{
+            cout<<"DRAW"<<endl;
+        }
+        T--;
+    }
+	return 0;
+}
