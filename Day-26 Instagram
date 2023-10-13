@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+string isSpamAccount(int X, int Y) {
+    if (X > 10 * Y) {
+        return "YES";
+    } else {
+        return "NO";
+    }
+}
+
+int main() {
+    int T;
+    cin >> T; 
+    for (int i = 0; i < T; i++) {
+        int X, Y;
+        cin >> X >> Y; 
+        string result = isSpamAccount(X, Y);
+        cout<<result<<endl; 
+    }
+    return 0;
+}
