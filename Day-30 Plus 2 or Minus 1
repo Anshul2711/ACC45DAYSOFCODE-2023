@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T,Y;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>Y;
+        if(Y==0)
+        {
+            cout<<"1"<<endl;
+        }
+        else
+        {
+            cout<<Y*3<<endl;
+        }
+        T--;
+    }
+	return 0;
+}
