@@ -1,29 +1,27 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int T,N,i;
-    cin>>T;
-    while(T>0)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        cin>>N;
-        int count=0,A[N];
-        for(i=0;i<N;i++)
+        int n,count=0,i;
+        cin >> n;
+        int a[n];
+
+        for (i = 0; i < n; i++)
         {
-            cin>>A[i];
-            if(A[i]%2==1)
-            {
+            cin >> a[i];
+            if(a[i]%2==1){
                 count++;
             }
         }
-        if(count%2==0)
-        {
-            cout<<"YES"<<endl;
-        }
-        else{
-            cout<<"NO"<<endl;
-        }
-        T--;
+
+        if (count>1 && count % 2 == 0)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
     return 0;
 }
