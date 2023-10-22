@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int T,N,i;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>N;
+        int count=0,A[N];
+        for(i=0;i<N;i++)
+        {
+            cin>>A[i];
+            if(A[i]%2==1)
+            {
+                count++;
+            }
+        }
+        if(count%2==0)
+        {
+            cout<<"YES"<<endl;
+        }
+        else{
+            cout<<"NO"<<endl;
+        }
+        T--;
+    }
+    return 0;
+}
