@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    while (T > 0) {
+        float L, R, M;
+        cin >> L >> R >> M;
+        float l = M / L;
+        
+        if (M <= L) {
+            l = 1;
+        }
+        
+        if (l - (int)l != 0) {
+            l = (int)l + 1;
+        }
+        
+        int r = M / R;
+        cout << r + (int)l << endl;
+        T--;
+    }
+    return 0;
+}
