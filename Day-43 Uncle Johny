@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T,K,N,k;
+    cin>>T;
+    while(T>0)
+    {
+        cin>>N;
+        int A[N],i,j;
+        for(i=0;i<N;i++)
+        {
+            cin>>A[i];
+        }
+        cin>>K;
+        for(i=0;i<N;i++)
+        {
+            if(i==K-1)
+            {
+                k=A[i];
+                break;
+            }
+        }
+        for(i=0;i<N-1;i++)
+        {
+            for(j=i+1;j<N;j++)
+            {
+                if(A[i]>A[j])
+                {
+                    int temp=A[i];
+                    A[i]=A[j];
+                    A[j]=temp;
+                }
+            }
+        }
+        for(i=0;i<N;i++)
+        {
+            if(A[i]==k)
+            {
+                cout<<(i+1)<<endl;
+            }
+        }
+        T--;
+    }
+	return 0;
+}
