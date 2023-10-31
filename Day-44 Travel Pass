@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T,N,A,B;
+    string S;
+    cin>>T;
+    while(T>0)
+    {
+        int sum=0;
+        cin>>N>>A>>B;
+        cin>>S;
+        for(int i=0;i<N;i++)
+        {
+            if(S[i]=='0')
+            {
+                sum=sum+A;
+            }
+            else{
+                sum=sum+B;
+            }
+        }
+        cout<<sum<<endl;
+        T--;
+    }
+	return 0;
+}
